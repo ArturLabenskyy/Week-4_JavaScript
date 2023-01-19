@@ -14,3 +14,6 @@ function summation(num) {
     }
     return sum;
 }
+
+console.log(summation(3));
+console.log(summation(8));
