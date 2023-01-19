@@ -14,12 +14,11 @@ function findNextSquare(num) {
     if (!Number.isInteger(Math.sqrt(num))) {
         return -1;
     } else {
-        while (!Number.isInteger(Math.sqrt(nextSquare))) {
-            nextSquare++;
-        }
+        let sqrt = Math.sqrt(num) + 1;
+        return Math.pow(sqrt, 2);
     }
-    return nextSquare;
 }
+
 console.log(findNextSquare(121));
 console.log(findNextSquare(625));
 console.log(findNextSquare(113));
