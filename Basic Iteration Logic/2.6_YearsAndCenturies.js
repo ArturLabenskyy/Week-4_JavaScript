@@ -14,3 +14,9 @@ function centuryFromYear(year) {
     century += year % 100 > 0 ? 1 : 0;
     return century;
 }
+console.log(centuryFromYear(50));
+console.log(centuryFromYear(101));
+console.log(centuryFromYear(1705));
+console.log(centuryFromYear(1900));
+console.log(centuryFromYear(1901));
+console.log(centuryFromYear(2000));

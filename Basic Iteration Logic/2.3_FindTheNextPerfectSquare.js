@@ -11,10 +11,10 @@
 // findNextSquare(114) --> returns -1 since 114 is not a perfect
 function findNextSquare(num) {
     let nextSquare = num + 1;
-    if (Math.sqrt(num) % 10 < 1) {
+    if (!Number.isInteger(Math.sqrt(num))) {
         return -1;
     } else {
-        while (Math.sqrt(nextSquare) % 10 < 1) {
+        while (!Number.isInteger(Math.sqrt(nextSquare))) {
             nextSquare++;
         }
     }
@@ -22,4 +22,4 @@ function findNextSquare(num) {
 }
 console.log(findNextSquare(121));
 console.log(findNextSquare(625));
-console.log(findNextSquare(114));
+console.log(findNextSquare(113));
