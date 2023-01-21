@@ -3,7 +3,6 @@ function duplicates(str) {
     str = str.toLowerCase();
     let duplicatesArr = [];
     for (let i = 0; i < str.length; i++) {
-        let isDuplicate = false;
         for (let j = 0; j < str.length; j++) {
             if (j === i) {
                 continue;
