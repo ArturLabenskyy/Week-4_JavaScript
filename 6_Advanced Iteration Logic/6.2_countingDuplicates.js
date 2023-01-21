@@ -3,13 +3,8 @@ function duplicates(str) {
     str = str.toLowerCase();
     let duplicatesArr = [];
     for (let i = 0; i < str.length; i++) {
-        for (let j = 0; j < str.length; j++) {
-            if (j === i) {
-                continue;
-            } else if (
-                str[i] === str[j] &&
-                duplicatesArr.indexOf(str[i]) === -1
-            ) {
+        for (let j = i + 1; j < str.length; j++) {
+            if (str[i] === str[j] && duplicatesArr.indexOf(str[i]) === -1) {
                 duplicatesArr.push(str[i]);
             }
         }
