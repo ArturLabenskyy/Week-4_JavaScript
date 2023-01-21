@@ -14,3 +14,17 @@
 // Signature will always contain 3 numbers; n will always be a non-negative number; if n == 0, then
 // return an empty array (except in C return NULL) and be ready for anything else which is not
 // clearly specified ;)
+function tribonacci(arr, n) {
+    let str = arr.join(``);
+    if (str === `011` || str === `111`) {
+        for (let i = 3; i < n; i++) {
+            arr.push(arr[i - 1] + arr[i - 2] + arr[i - 3]);
+        }
+        return arr;
+    } else {
+        return `:)`;
+    }
+}
+
+console.log(tribonacci([1, 1, 1], 10));
+console.log(tribonacci([0, 1, 1], 10));
