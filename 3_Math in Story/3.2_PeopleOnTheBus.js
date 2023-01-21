@@ -11,3 +11,22 @@
 // Please keep in mind that the test cases ensure that the number of people in the bus is always
 // >= 0. So the return integer can't be negative.
 // The second value in the first integer array is 0, since the bus is empty in the first bus stop.
+
+function lastStop(arr) {
+    let inBus = 0;
+    let outBus = 0;
+    for (let i = 0; i < arr.length; i++) {
+        inBus += arr[i][0];
+        outBus += arr[i][1];
+    }
+    return `This is the last stop: ${inBus - outBus} people inside!`;
+}
+
+console.log(
+    lastStop([
+        [5, 0],
+        [5, 0],
+        [5, 0],
+        [0, 10],
+    ])
+);
